@@ -20,8 +20,6 @@ function changeTitle(){
     if(x.matches){
         document.getElementById("subCatchphrase").style.paddingBottom = "40px";
         document.getElementById("subCatchphrase").innerHTML = "Tippe auf die verdächtigen Stellen. <br>Hast du etwas entdeckt? Tippe erneut für mehr Informationen.";
-    }else{
-        console.log("not working");
     }
 
 }
