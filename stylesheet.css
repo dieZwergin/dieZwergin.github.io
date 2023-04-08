@@ -14,7 +14,18 @@ p{
     font-size: xx-large;
     /* margin: 0; */
 }
+@media screen and (max-width: 992px) {
 
+    #titleText{
+        padding-left: 5%;
+    }  
+}
+@media screen and (max-width: 600px) {
+
+    #titleText{
+        padding-left: 5%;
+    }   
+}
 
 #catchphrase {
     padding-top: 1%;
@@ -74,6 +85,19 @@ p{
     margin-bottom: 0.5%;
     margin-left: 1%;
 }
+@media screen and (max-width: 992px) {
+
+    #logo_hs{
+        width: 25%;
+    }  
+}
+@media screen and (max-width: 600px) {
+
+    #logo_hs{
+        width: 25%;
+    }   
+}
+
 
 #mailBorder{
     width: 90%;
@@ -92,12 +116,36 @@ p{
     background-color: rgb(246, 246, 246);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+@media screen and (max-width: 992px) {
+
+    #mailOptions{
+        font-size: large;
+    }  
+}
+@media screen and (max-width: 600px) {
+
+    #mailOptions{
+        font-size: large;
+    }    
+}
 
 .optionImage{
     height: 15px;
     padding-left: 2px;
     padding-top: 5px;
     padding-right: 5px;
+}
+@media screen and (max-width: 992px) {
+
+    .optionImage{
+        height: 25px;
+    }  
+}
+@media screen and (max-width: 600px) {
+
+    .optionImage{
+        height: 25px;
+    }   
 }
 
 #redX{
@@ -114,6 +162,18 @@ p{
     border-color: black;
     width: 100%;
     height: 50%;
+}
+@media screen and (max-width: 992px) {
+
+    #mailHeaderContainer{
+        font-size: large;
+    }  
+}
+@media screen and (max-width: 600px) {
+
+    #mailHeaderContainer{
+        font-size: large;
+    }   
 }
 
 .mailHeader{
