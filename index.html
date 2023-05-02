@@ -1,21 +1,80 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<style>
-			body {
-				background-color: green;
-			}
-		</style>
-	</head>
-	<body>
-		<div style="position: absolute; font-family: sans-serif; max-width: 600px;">
-      
-      
-    		<div style="position:absolute">
-        		<video width="600" height="100%" autoplay loop muted playsinline>
-        		<source src="movie-hevc.mov" type='video/mp4; codecs="hvc1"'>
-        		<source src="video2.webm" type="video/webm">
-        	</video>
-		</div>
-	</body>
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Anti-Phishing</title>      
+    <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
+    <link href="stylesheet.css" rel="stylesheet">
+    
+  </head>
+
+<!-- <a href="#item"><img src="" alt=""></a> -->
+
+<body onload="changeTitle()">
+  <div class="title" id="header"> 
+    <img class="title" id="logo_hs" src="\images\logo_hsFulda.jpg">
+    <p class="title" id="titleText">Würdest du darauf reinfallen?</p>
+    <!--Irgend ein catchy Titel hier hin!-->
+
+  </div>
+
+  <div id="catchphrase">Was stimmt hier nicht?</div>
+  <div id="subCatchphrase">Fahre die Maus über verdächtige Stellen, um weitere Informationen zu finden. </div>
+
+  <div id="mailBorder">
+    <div id="mailOptions"> <img class="optionImage" id="redX" src="\images\redX.png"> <img class="optionImage" id="arrowBack" src="\images\arrowBack.png"> Antworten <img class="optionImage" id="arrowForward" src="\images\arrowForward.png">Weiterleiten <img class="optionImage" id="trash" src="\images\trash.png">Löschen</div>
+    <div class="mailHeader" id="mailHeaderContainer">
+      <div class="mailHeader" id="mailHeaderLabels">
+        <p class="headerField">Von:</p>
+        <p class="headerField">An:</p>
+        <p class="headerField">Betreff:</p>
+        <p class="headerField">Anhang:</p>
+      </div>
+      <div class="mailHeader" id="mailHeaderContent">
+        <p class="headerContent">"Karim Khakzar" &lt;karim.khakzar@<a class="eventPoint"  onclick="revealHint('firstHint')">hss</a>-fulda.de&gt;</p>
+        <p class="headerContent">"Max Mustermann" &lt;max.mustermann@hs-fulda.de&gt;</p>
+        <p class="headerContent">DRINGEND! Anhang prüfen</p>
+        <p class="headerContent">2022_07_16_Vorgang_Hochschule_Fulda_2319342.pdf<a class="eventPoint"  onclick="revealHint('secondHint')">.exe</a></p>
+      </div>
+    </div>
+    <div id="mailContent">
+      <p>Guten Tag Herr Mustermann, <br> <br>bitte prüfen Sie das Dokument im Anhang <br> und geben Sie mir zeitnah Rückmeldung. <br><br> Mit freundlichen Grüßen, <br> Karim Khakzar</p>
+    </div>
+  </div>
+
+  <details>
+    <summary> Worauf sollte bei Phishing geachtet werden? </summary>
+    <div class="accordeonContent">
+      <p><strong>Stimmt die E-Mail Adresse der Person?</strong></p>
+      <p>Der angegebene Name kann von jedem Absernder beliebig gewählt werden und wird gerne für Angriffe missbraucht. Prüfen Sie daher immer, ob die angegebene E-Mail Adresse auch die erwartete Adresse für diese Person ist.</p>
+      <p><strong>[EXTERN]</strong></p>
+      <p>E-Mails von außerhalb der Hochschule enthalten immer ein "[EXTERN]" im Betreff. Wenn E-Mails von Hochschul-Angehörigen ein "[EXTERN]" enthalten, ist dies ein Zeichen für einen Phishing Angriff.</p>
+      <p><strong>Vorsicht bei Links und Dateien</strong></p>
+      <p>Vorsicht bei Aufforderungen zum Anklicken von Links oder Öffnen von Dateianhängen! Prüfen Sie, ob die verlinkte Seite im Browser auch wirklich zur erwarteten Seite führt. Klicken Sie im Zweifel nicht auf den angegebenen Link selbst, sondern geben Sie die Seite selbst im Browser ein bzw. suchen in Google nach der Seite. Öffnen Sie Dateianhänge nur, wenn Sie den Anhang auch in diesem Kontext erwarten und öffnen Sie keine ausführbaren Dateien (z.B. .exe).</p>
+    </div>
+  </details>
+
+  <details>
+    <summary> Was mache ich... </summary>
+    <div class="accordeonContent">
+      <p><strong>... um Schäden zu verhindern?</strong></p>
+      <p>Nicht auf die Aufforderung der E-Mail eingehen und die E-Mail als Anhang an spam-meldung@lists.hs-fulda.de senden.</p>
+      <p><strong>... wenn ich mir unsicher bin?</strong></p>
+      <p>Die E-Mail an spam-meldung@lists.hs-fulda.de senden bzw. den Absender der E-Mail telefonisch kontaktieren.</p>
+      <p><strong>... wenn etwas passiert ist?</strong></p>
+      <p>Wenden Sie sich an it-support@rz.hs-fulda.de (telefonisch erreichbar unter -1300)</p>
+    </div>
+  </details>
+
+  <div>
+    <p class="hintHeader"><strong>Hinweise:</strong></p>
+    <p class="hint" id="firstHint" onclick="revealHint('firstHint')"><strong>Die Absenderadresse stimmt nicht mit der erwarteten Adresse überein.</strong><br>
+      Kriminelle können den Absendernamen leicht fälschen. Die Absenderadresse kann allerdings nicht gefälscht werden. Achten Sie besonders auf kleine Veränderungen im Namen.</p>
+    <br>
+    <p class="hint" id="secondHint" onclick="revealHint('secondHint')"><strong>Die E-Mail suggeriert, dass es sich bei der Datei im Anhang um ein Dokument handelt.</strong><br>
+      Allerdings wird im Anhang eine ausführbare Datei mitgesendet, die Kriminellen einen direkten Zugang zu Ihrem Rechner verschaffen kann.</p>
+    </div>
+    <br><br><br><br><br><br><br><br><br>
+    <script src="script.js"></script>
+</body>
 </html>
