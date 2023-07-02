@@ -33,7 +33,7 @@
       <div class="mailHeader" id="mailHeaderContent">
         <p class="headerContent">"Karim Khakzar" &lt;karim.khakzar@<a class="eventPoint"  onclick="revealHint('firstHint')">hss</a>-fulda.de&gt;</p>
         <p class="headerContent">"Max Mustermann" &lt;max.mustermann@hs-fulda.de&gt;</p>
-        <p class="headerContent">DRINGEND! Anhang prüfen</p>
+        <p class="headerContent"><a class="eventPoint" onclick="revealHint('thirdHint')">DRINGEND!</a> Anhang prüfen</p>
         <p class="headerContent">2022_07_16_Vorgang_Hochschule_Fulda_2319342.pdf<a class="eventPoint"  onclick="revealHint('secondHint')">.exe</a></p>
       </div>
     </div>
@@ -41,6 +41,21 @@
       <p>Guten Tag Herr Mustermann, <br> <br>bitte prüfen Sie das Dokument im Anhang <br> und geben Sie mir zeitnah Rückmeldung. <br><br> Mit freundlichen Grüßen, <br> Karim Khakzar</p>
     </div>
   </div>
+  
+  <div>
+    <p class="hintHeader"><strong>Hinweise:</strong></p>
+    <p class="hint" id="firstHint" onclick="revealHint('firstHint')"><strong>Die Absenderadresse stimmt nicht mit der erwarteten Adresse überein.</strong><br>
+      Kriminelle können den Absendernamen leicht fälschen. Die Absenderadresse kann allerdings nicht gefälscht werden. Achten Sie besonders auf kleine Veränderungen im Namen.</p>
+    <br>
+    <p class="hint" id="thirdHint" onclick="revealHint('thirdHint')"><strong>Der Betreff fordert schnelles Handeln.</strong><br>
+      Um Empfänger zu zügigem, unüberlegtem Handeln zu bewegen, wird im Betreff eine Dringlichkeit suggeriert und zum Handeln aufgefordert.</p>
+    </div>
+    <br>
+    <p class="hint" id="secondHint" onclick="revealHint('secondHint')"><strong>Die E-Mail suggeriert, dass es sich bei der Datei im Anhang um ein Dokument handelt.</strong><br>
+      Allerdings wird im Anhang eine ausführbare Datei mitgesendet, die Kriminellen einen direkten Zugang zu Ihrem Rechner verschaffen kann.</p>
+    </div>
+
+    <br>
 
   <details>
     <summary> Worauf sollte bei Phishing geachtet werden? </summary>
@@ -66,14 +81,14 @@
     </div>
   </details>
 
-  <div>
-    <p class="hintHeader"><strong>Hinweise:</strong></p>
-    <p class="hint" id="firstHint" onclick="revealHint('firstHint')"><strong>Die Absenderadresse stimmt nicht mit der erwarteten Adresse überein.</strong><br>
-      Kriminelle können den Absendernamen leicht fälschen. Die Absenderadresse kann allerdings nicht gefälscht werden. Achten Sie besonders auf kleine Veränderungen im Namen.</p>
-    <br>
-    <p class="hint" id="secondHint" onclick="revealHint('secondHint')"><strong>Die E-Mail suggeriert, dass es sich bei der Datei im Anhang um ein Dokument handelt.</strong><br>
-      Allerdings wird im Anhang eine ausführbare Datei mitgesendet, die Kriminellen einen direkten Zugang zu Ihrem Rechner verschaffen kann.</p>
+  <details>
+    <summary> Wo kann ich mich informieren? </summary>
+    <div class="accordeonContent">
+      <p><strong>Verbraucherzentrale</strong></p>
+      <p>Über das <a href="https://www.verbraucherzentrale.de/wissen/digitale-welt/phishingradar/phishingradar-aktuelle-warnungen-6059" >Phishing-Radar</a> der Verbraucherzentrale kann man sich stets über die aktuellsten Phishing-Maschen informieren. </p>
     </div>
+  </details>
+
     <br><br><br><br><br><br><br><br><br>
     <script src="script.js"></script>
 </body>
